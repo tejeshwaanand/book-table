@@ -2,6 +2,7 @@
   "name": "frontend",
   "version": "0.1.0",
   "private": true,
+  "proxy":"https://book-table-one.vercel.app",
   "scripts": {
     "dev": "next dev --turbopack",
     "build": "next build",
