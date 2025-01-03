@@ -142,7 +142,7 @@ const SlotsPage = () => {
       {errorMessage && <p className="error-message">{errorMessage}</p>}
       {showSlots && (
         <>
-          <h2>Available Slots</h2>
+          <h2>Select Available Slots</h2>
           <div className="slots-grid">
             {allSlots.map((slot, index) => (
               <button
