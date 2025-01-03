@@ -1,0 +1,166 @@
+.cancel-booking-page {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+  }
+  
+  h1 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  .input-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+  }
+  
+  .text-container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .label-input-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+  }
+  
+  label {
+    font-weight: bold;
+    min-width: 100px;
+  }
+  
+  .input-cancel {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    flex: 1;
+  }
+  .date-picker-container {
+    display: flex;
+    align-items: center; /* Align vertically */
+    justify-content: left;
+    gap: 10px; /* Space between label and input */
+  }
+  
+  .date-picker-container label {
+    margin: 0;
+  }
+  
+  .date-picker-container .react-datepicker-wrapper {
+    display: inline-block;
+    border: 1px solid #ccc; 
+    border-radius: 4px;
+  }
+  
+  
+  .search-button {
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    align-self: flex-start;
+  }
+  
+  .search-button:hover {
+    background-color: #0056b3;
+  }
+  
+  .booking-details {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+  }
+  
+  .booking-details h1 {
+    margin-bottom: 15px;
+    font-size: 20px;
+    color: #333;
+  }
+  
+  .booking-details ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .booking-details li {
+    margin-bottom: 10px;
+    font-size: 16px;
+  }
+  
+  .cancel-button {
+    padding: 10px 20px;
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 15px;
+  }
+  
+  .cancel-button:hover {
+    background-color: #b52a38;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .cancel-booking-page {
+      padding: 15px;
+    }
+  
+    .label-input-row {
+      flex-direction: column;
+      align-items: stretch;
+    }
+  
+    .search-button, 
+    .cancel-button {
+      width: 100%;
+      text-align: center;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .input-container {
+      flex-direction: column;
+      gap: 10px;
+    }
+  
+    h1 {
+      font-size: 24px;
+    }
+  
+    label {
+      font-size: 14px;
+    }
+  
+    .input-cancel, 
+    .datepicker {
+      padding: 8px;
+      font-size: 14px;
+    }
+  
+    .search-button, 
+    .cancel-button {
+      font-size: 14px;
+      padding: 10px;
+    }
+  
+    .booking-details li {
+      font-size: 14px;
+    }
+  }
+  

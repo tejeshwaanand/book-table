@@ -1,0 +1,132 @@
+/* General Styles */
+.admin-page {
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+h1 {
+  text-align: center;
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+/* Date Picker and Search Button Container */
+.date-picker-container {
+  display: flex;
+  justify-content: justify;  /* Space out elements evenly */
+  align-items: center;             /* Align items vertically in the center */
+  margin-bottom: 20px;
+  gap: 10px;                       /* Optional: Adds spacing between elements */
+}
+
+.date-picker-container label {
+  font-size: 20px;
+  margin-right: 10px;              /* Space between label and date picker */
+}
+
+.date-picker-container .react-datepicker-wrapper {
+  margin-right: 10px; 
+  border: 1px solid #ccc;
+  border-radius: 4px;           /* Space between date picker and search button */
+}
+
+/* Table Styles */
+.booking-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.booking-table th,
+.booking-table td {
+  padding: 10px;
+  text-align: left;
+  border: 1px solid #ddd;
+}
+
+.booking-table th {
+  background-color: #f4f4f4;
+}
+
+.booking-table td {
+  font-size: 14px;
+}
+
+.delete-button {
+  background-color: #ff4d4d;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+.delete-button:hover {
+  background-color: #ff1a1a;
+}
+
+.error-message {
+  color: red;
+  text-align: center;
+}
+
+/* Loading Styles */
+.loading {
+  text-align: center;
+  font-size: 18px;
+  color: #888;
+  margin-top: 20px;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  /* Adjust Date Picker and Table Layout for Small Screens */
+  .date-picker-container {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+
+  .date-picker-container label {
+    font-size: 14px;
+    margin-right: 0;
+  }
+
+  .booking-table th,
+  .booking-table td {
+    font-size: 12px;
+    padding: 8px;
+  }
+
+  .booking-table td {
+    word-wrap: break-word;
+    max-width: 200px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .delete-button {
+    padding: 4px 8px;
+  }
+
+  .admin-page {
+    padding: 10px;
+  }
+
+  h1 {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  /* Further adjust for very small screens (mobile phones) */
+  .date-picker-container {
+    width: 100%;
+  }
+
+  .booking-table {
+    font-size: 10px;
+  }
+
+  .delete-button {
+    font-size: 12px;
+  }
+}

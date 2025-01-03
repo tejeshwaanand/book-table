@@ -1,0 +1,201 @@
+/* SlotsPage.css */
+
+/* Main Container */
+.booking-container {
+  padding: 20px;
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+  box-sizing: border-box;
+  min-height: 100vh; /* Ensure the container covers the entire screen */
+}
+
+.mainDiv {
+  display: flex;
+  justify-content: center;  
+}
+.mainImage{
+  width: 50%;
+  background: url('/images/123.jpg') no-repeat center center/cover;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+.mainImage Image{
+  position: absolute;
+  height: 100%;
+  width: 50%;
+
+}
+
+/* Header Styling */
+.booking-container h1 {
+
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+.name-input input,.contact-input input,.guest-input input{
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+.name-input{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.contact-input{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.guest-input{
+  display: flex;
+  justify-content: right;
+  align-items: center;
+}
+
+/* Date Picker and Button */
+.date-picker-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.date-picker-container button {
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+}
+.date-picker-container .react-datepicker-wrapper {
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+/* Slots Grid */
+.slots-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+  gap: 10px;
+  margin-top: 20px;
+}
+
+/* Slot Button Styling */
+.slot-button {
+  padding: 10px;
+  font-size: 16px;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.slot-button.available {
+  border-color: #28a745;
+  background-color: #d4edda;
+  color: #155724;
+}
+
+.slot-button.unavailable {
+  border-color: #dc3545;
+  background-color: #f8d7da;
+  color: #721c24;
+  cursor: not-allowed;
+}
+
+.slot-button.selected {
+  border-color: #28a745;
+  background-color: #155724;
+  color: white;
+}
+
+/* Form Section */
+.form-section {
+  margin-top: 20px;
+}
+
+.form-section input {
+  display: block;
+  margin: 10px auto;
+  padding: 10px;
+  width: 80%;
+}
+
+.form-section button {
+  margin-top: 10px;
+  padding: 10px 20px;
+  font-size: 16px;
+}
+
+/* Error Message */
+.error-message {
+  color: red;
+}
+
+/* Ensure body is scrollable */
+body {
+  overflow-x: hidden;
+  overflow-y: auto; /* Ensure vertical scrolling */
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 768px) {
+  .slots-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(60px, 1fr));
+    gap: 10px;
+    margin-top: 20px;
+  }
+  .mainImage Image{
+    position: absolute;
+    height: 100%;
+    width: 50%;
+  
+  }
+  .booking-container h1 {
+    font-size: 24px;
+  }
+
+  .date-picker-container {
+    flex-direction: column;
+  }
+
+  .form-section input {
+    width: 90%;
+  }
+
+  .form-section button {
+    font-size: 14px;
+    padding: 8px 16px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .slots-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(60px, 1fr));
+    gap: 10px;
+    margin-top: 20px;
+  }
+  .booking-container h1 {
+    font-size: 20px;
+  }
+  .mainImage{
+    display: none;
+  }
+  .slot-button {
+    font-size: 14px;
+    padding: 8px;
+  }
+
+  .form-section input {
+    width: 100%;
+  }
+
+  .form-section button {
+    font-size: 12px;
+    padding: 6px 12px;
+  }
+}

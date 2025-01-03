@@ -1,0 +1,51 @@
+/* confirmation.css */
+
+/* General Styling */
+.info {
+  background-color: rgb(249, 249, 249); /* Dark gray background */
+  border-radius: 8px;
+  padding: 20px;
+  margin: 20px auto;
+  max-width: 500px;
+  color: black; /* White text for contrast */
+  text-align: left;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  font-family: Arial, sans-serif;
+   
+}
+
+/* Information Paragraphs */
+.info p {
+  margin: 10px 0;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+/* Strong Text (Labels) */
+.info p strong {
+  font-weight: bolder;
+}
+
+/* Print Button */
+
+.info button:hover {
+  background-color: #ff4757;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+  .info {
+    padding: 15px;
+    margin: 10px;
+    font-size: 14px;
+  }
+
+  .info p {
+    font-size: 14px;
+  }
+
+  .info button {
+    font-size: 12px;
+    padding: 8px 12px;
+  }
+}
