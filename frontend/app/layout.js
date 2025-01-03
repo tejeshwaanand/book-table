@@ -12,7 +12,7 @@ export default function Layout({ children }) {
   return (
     <>
       <Navbar />
-      <main className={inter.variable} style={{'paddingTop':'60px !important'}} >
+      <main className={`${inter.variable} main-container`} >
         {children}
       </main>
     </>
