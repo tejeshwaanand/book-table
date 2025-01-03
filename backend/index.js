@@ -14,7 +14,9 @@ app.use(bodyParser.json());
 
 // Connect to MongoDB
 connectDB();
-
+app.get("/",(req,res)=>{
+  res.send("Server is running");
+})
 // Routes
 app.use('/api/bookings', bookingRoutes);
 
