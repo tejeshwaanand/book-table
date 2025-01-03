@@ -10,7 +10,7 @@ const CalendarView = () => {
   useEffect(() => {
     const fetchBookings = async () => {
       const formattedDate = selectedDate.toISOString().split('T')[0];
-      const res = await axios.get(`http://localhost:5000/api/bookings/get-bookings?date=${formattedDate}`);
+      const res = await axios.get(`${process.env.NEXT_PUBLIC_BACKEND_URL}/api/bookings/get-bookings?date=${formattedDate}`);
       setBookings(res.data);
     };
     fetchBookings();

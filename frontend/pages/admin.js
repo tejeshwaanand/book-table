@@ -19,7 +19,7 @@ const Admin = () => {
     try {
       setLoading(true);
       const formattedDate = date.toISOString().split('T')[0]; // Format date as 'YYYY-MM-DD'
-      const response = await axios.get(`http://localhost:5000/api/bookings/get-bookings?date=${formattedDate}`);
+      const response = await axios.get(`${process.env.NEXT_PUBLIC_BACKEND_URL}/api/bookings/get-bookings?date=${formattedDate}`);
       console.log(response.data);
       
       // Check if response data is an array
@@ -43,7 +43,7 @@ const Admin = () => {
       return; // If the user cancels, exit the function without deleting
     }
     try {
-      await axios.delete(`http://localhost:5000/api/bookings/delete-booking/${id}`);
+      await axios.delete(`${process.env.NEXT_PUBLIC_BACKEND_URL}/api/bookings/delete-booking/${id}`);
       setBookings(bookings.filter((booking) => booking._id !== id)); // Remove the deleted booking from the list
     } catch (error) {
       setErrorMessage('Error deleting booking');

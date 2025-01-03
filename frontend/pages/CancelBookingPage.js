@@ -35,7 +35,7 @@ const CancelBookingPage = () => {
     try {
       const formattedDate = formData.date.toISOString().split('T')[0];
       const response = await axios.get(
-        `http://localhost:5000/api/bookings/get-booking-name?date=${formattedDate}&name=${formData.name}&contact=${formData.contact}`
+        `${process.env.NEXT_PUBLIC_BACKEND_URL}/api/bookings/get-booking-name?date=${formattedDate}&name=${formData.name}&contact=${formData.contact}`
       );
       if (response.data.booking) {
         setBookingDetails(response.data.booking);
@@ -55,7 +55,7 @@ const CancelBookingPage = () => {
     try {
       const formattedDate = formData.date.toISOString().split('T')[0];
       await axios.delete(
-        `http://localhost:5000/api/bookings/cancel-booking?date=${formattedDate}&name=${formData.name}&contact=${formData.contact}`
+        `${process.env.NEXT_PUBLIC_BACKEND_URL}/api/bookings/cancel-booking?date=${formattedDate}&name=${formData.name}&contact=${formData.contact}`
       );
       setConfirmationMessage('Your booking has been canceled successfully.');
       setBookingDetails(null); // Clear booking details after cancellation

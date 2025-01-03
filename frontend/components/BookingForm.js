@@ -47,7 +47,7 @@ const SlotsPage = () => {
     try {
       const formattedDate = selectedDate.toISOString().split('T')[0];
       const response = await axios.get(
-        `http://localhost:5000/api/bookings/get-available-slots?date=${formattedDate}`
+        `${process.env.NEXT_PUBLIC_BACKEND_URL}/api/bookings/get-available-slots?date=${formattedDate}`
       );
       setAvailableSlots(response.data.availableSlots || []);
       setErrorMessage('');
@@ -95,10 +95,11 @@ const SlotsPage = () => {
       name: formData.name,  // Name of the person
       contact: formData.contact,  // Contact number
     };
+    
 
     try {
       // Send booking data to the backend
-      await axios.post('http://localhost:5000/api/bookings/create-booking', dataToSubmit);
+      await axios.post(`${process.env.NEXT_PUBLIC_BACKEND_URL}/api/bookings/create-booking`, dataToSubmit);
 
       // Store the booking data in localStorage
       localStorage.setItem('bookingSummary', JSON.stringify(dataToSubmit));
